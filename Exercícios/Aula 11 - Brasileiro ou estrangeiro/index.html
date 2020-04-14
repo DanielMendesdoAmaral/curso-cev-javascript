@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NACIONALIDADE</title>
+</head>
+<body>
+    <h1>Insira o país em que você nasceu</h1>
+    <input type="text" name="insiraNac" id="insiraNac">
+    <input type="button" value="VERIFICAR" onclick="clicar()">
+    <p></p>
+    <script>
+        function clicar() {
+            var nacionalidade = document.getElementById("insiraNac").value //Tem que receber o valor, senão não funciona. Coloque .value.
+            var mensagem = document.getElementsByTagName("p")[0]
+            if (nacionalidade=="Brasil"){
+                mensagem.innerText = `Você é brasileiro`
+            } else {
+                mensagem.innerText = `Você é estrangeiro`
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: aquamarine;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    line-height: 100px;
+    text-transform: uppercase;
+}
+
+.white {
+    margin: auto;
+    height: 340px;
+    border-radius: 10px;
+    width: 50%;
+    background-color: white;
+}
+
+.display-flex {
+    display: flex;
+    padding: 20px 0px;
+    color: black;
+    align-items: center;
+    font-size: 12.5px;
+    justify-content: center;
+}
+
+input {
+    height: 25px;
+    margin-left: 20px;
+}
+
+#botao {
+    padding-bottom: 30px;
+    width: 28%;
+    margin: auto;
+}
+
+select {
+    margin-left: 41%;
+}
+
+

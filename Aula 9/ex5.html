@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Primeiros passos com o DOM </title>
+    <style>
+        body {
+            background-color: rgb(55, 32, 85);
+            color: #EEEEEE;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="titulo">INICIANDO ESTUDOS DOM</h1>
+    <p>Aqui vai o resultado.</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="click-on-me">Clique em mim</div>
+    <script>
+        //EXEMPLO 1
+        window.document.write("<br><i>Escrevendo pelo Java Script<br><br><i>")
+
+        //EXEMPLO 2
+        var p1 = window.document.getElementsByTagName("p")[0]  /* A variável p1 vai receber o primeiro elemento (o elemento da posição 0) p de todo o HTML. */
+        p1.style.color = "black" /* Vou mudar a cor dele. */
+        window.document.writeln(p1.innerHTML) /* Vai escrever a variável p1. Se você colocar innerText, ele vai escrever o texto sem as formatações. */
+
+        //EXEMPLO 3 
+        var divi = window.document.getElementById("click-on-me")
+        divi.style.backgroundColor = "yellow"
+        divi.style.color = "black"
+
+        //EXEMPLO 4
+        var sel = window.document.querySelector("h1.titulo")
+        sel.style.backgroundColor = "white"
+        sel.style.color = "blue"
+    </script>
+</body>
+</html>

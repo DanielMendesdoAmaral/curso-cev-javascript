@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pré-visualize o seu carro</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>PRÉ-VISUALIZE O SEU CARRO</h1>
+    <section class="container">
+        <div class="align">
+            <select name="selecione1" id="selecione1">
+                <option value="SELECIONE O CARRO">SELECIONE O CARRO</option>
+                <option value="BMW 2020">BMW 2020</option>
+                <option value="BMW 2003">BMW 2003</option>
+            </select>
+            <select name="selecione2" id="selecione2">
+                <option value="SELECIONE A COR">SELECIONE A COR</option>
+                <option value="PRETO">PRETO</option>
+                <option value="VERMELHO">VERMELHO</option>
+                <option value="AZUL">AZUL</option>
+            </select>
+            <input type="button" value="VER CARRO" onclick="visualizar()">
+        </div>
+    </section>
+    <h1></h1>
+    <section id="visualizacao"></section>
+</body>
+</html>

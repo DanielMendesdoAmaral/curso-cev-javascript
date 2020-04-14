@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SOMANDO NÚMEROS </title>
+</head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: teal;
+            font: normal 15px Arial;
+        }
+        h1 {
+            text-align: center;
+            line-height: 100px;
+        }
+        .inputs {
+            width: 57%;
+            margin: auto;
+        }
+        p {
+            line-height: 100px;
+            text-align: center;
+        }
+    </style>
+<body>
+    <h1>Somando valores</h1>
+    <div class="inputs">
+        <input type="number" name="txtn1" id="txtn1">
+        <input type="number" name="txtn2" id="txtn2">
+        <input type="button" value="Somar" onclick="somar()">
+    </div>
+    <p>Resultado: </p>
+</body>
+    <script>
+        function somar() {
+            //Coloca os inputs em variáveis
+            var tn1 = document.getElementById("txtn1")
+            var tn2 = document.getElementById("txtn2")
+
+            //Transforma o valor digitado em cada input de string para números
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+
+            var soma = n1 + n2
+
+            //Para imprimir o resultado
+            var resultado = document.getElementsByTagName("p")[0]
+            resultado.innerHTML = `A soma entre ${n1} e ${n2} é ${soma}` 
+        }
+    </script>
+</html>

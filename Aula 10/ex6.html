@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTOS DOM</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div.between {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+            height: 666px;
+        }
+        div#area {
+            background-color: rgb(80, 133, 0);
+            color: white;
+            width: 200px;
+            height: 200px;
+            font: normal 20pt Arial;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+        div#area-dois {
+            background-color: rgb(160, 14, 14);
+            color: white;
+            width: 200px;
+            height: 200px;
+            font: normal 20pt Arial;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="between">
+        <div id="area" onmousemove="entrar()" onmouseout="sair()">
+            Interaja...
+        </div>
+
+        <div id="area-dois">
+            Interaja...
+        </div>
+    </div>
+    <script>
+        //EXEMPLO 1 - Aqui são os eventos da primeira div. Ela está relacionada no HTML. No exemplo, 2, voce relaciona diretamente pelo JavaScript, e não há declaração de variáveis dentro da função, mas fora, pois o escopo dela será global. Porém, esse método de declarar variáveis não é tão bom por questôes de memória. Mas a questão de escolher entre disparar a função pelo html ou pelo javascript tanto faz, vai de sua preferência.
+        function entrar() {
+            var divi = window.document.getElementById("area")
+            var body = window.document.getElementsByTagName("body")[0]
+            divi.style.backgroundColor = "white"
+            body.style.backgroundColor = "rgb(80, 133, 0)"
+            divi.style.color = "rgb(80, 133, 0)"
+            divi.innerText = "Entrou!"
+        }
+
+        function sair() {
+            var divi = window.document.getElementById("area")
+            var body = window.document.getElementsByTagName("body")[0]
+            divi.style.backgroundColor = "rgb(80, 133, 0)"
+            body.style.backgroundColor = "white"
+            divi.style.color = "white"
+            divi.innerText = "Saiu!"
+        }
+
+        //EXEMPLO 2 - Aqui são os eventos da segunda div. Relacionamos as funções diretamente pelo javascript, e usamos variáveis de escopo global.
+
+        var corpo = document.getElementsByTagName("body")[0]
+        var divi_dois = document.getElementById("area-dois")
+
+        //Relacionando as funções e ações por javascript
+        divi_dois.addEventListener("mousemove", entrarDois) 
+        divi_dois.addEventListener("mouseout", sairDois)
+
+        function entrarDois() {
+            divi_dois.style.backgroundColor = "white"
+            divi_dois.style.color = "rgb(160, 14, 14)"
+            divi_dois.innerText = "Entrou!"
+            corpo.style.backgroundColor = "rgb(160, 14, 14)"
+        }
+
+        function sairDois() {
+            divi_dois.style.backgroundColor = "rgb(160, 14, 14)"
+            divi_dois.style.color = "white"
+            divi_dois.innerText = "Saiu!"
+            corpo.style.backgroundColor = "white"
+        }
+
+    </script>
+</body>
+</html>
