@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: darkolivegreen;
+}
+
+h1 {
+    text-align: center;
+    line-height: 100px;
+    color: white;
+}
+
+.white {
+    background-color: white;
+    height: auto;
+    border-radius: 10px;
+    margin: auto;
+    width: 60%;
+}
+
+.df {
+    display: flex;
+    padding: 25px;
+    width: 70%;
+    margin: auto;
+}
+
+input {
+    margin-left: 25px;
+}
+
+select {
+    margin: 0px 0px 0px 127px;
+    width: 150px;
+}
+
+input#botaoSelecione {
+    margin: 0px 0px 25px 127px;
+}
+
+#resultados {
+    margin: 0px 0px 25px 127px;
+}
